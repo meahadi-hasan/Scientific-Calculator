@@ -1,0 +1,112 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2c3e50;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.calculator {
+    background: #34495e;
+    width: 100%;
+    max-width: 400px;
+    min-height: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.display {
+    background: #ecf0f1;
+    border-radius: 8px;
+    height: 120px;
+    font-size: 3.5rem;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: 1fr;
+}
+
+.button {
+    background: #95a5a6;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.button.scientific {
+    background: #3498db;
+    font-size: 1.1rem;
+}
+
+
+.button.operator {
+    background: #e67e22;
+}
+
+.button.equal {
+    background: #2ecc71;
+}
+
+.button.special {
+    background: #e74c3c;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+/* Mobile Resposive */
+@media (max-width: 600px) {
+    .calculator {
+        min-height: 100%;
+        padding: 10px;
+    }
+
+    .display {
+        height: 100px;
+        font-size: 2.8rem !important;
+        padding: 15px !important;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .button {
+        font-size: 1.4rem !important;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .display {
+        font-size: 2.2rem !important;
+    }
+    
+    .button {
+        padding: 12px 0;
+    }
+}
+
